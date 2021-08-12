@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yvervier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/28 09:50:26 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/30 22:01:39 by yvervier         ###   ########.fr       */
+/*   Created: 2021/01/30 21:41:08 by yvervier          #+#    #+#             */
+/*   Updated: 2021/01/30 21:59:43 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*new_lst;
+	t_list	*tmp;
 
-	if (!(new_lst = malloc(sizeof(t_list))))
-		return (NULL);
-	new_lst->content = content;
-	new_lst->next = NULL;
-	return (new_lst);
+	if (!lst)
+		return ;
+	if (f)
+	{
+		while (lst)
+		{
+			tmp = lst->next;
+			f(lst->content);
+			lst = tmp;
+		}
+	}
 }
