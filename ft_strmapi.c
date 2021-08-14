@@ -6,7 +6,7 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 10:17:24 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/21 10:25:08 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/12 18:52:06 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	if (!(str = (char*)malloc(sizeof(str) * (ft_strlen(s) + 1))))
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!(str))
 		return (NULL);
 	i = 0;
 	while (s[i])

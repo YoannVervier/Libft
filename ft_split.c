@@ -6,13 +6,13 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 08:17:38 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/21 09:10:07 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:54:02 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_countwords(char const *s, char c)
+static int	ft_countwords(char const *s, char c)
 {
 	int		word;
 	int		i;
@@ -30,12 +30,13 @@ static int		ft_countwords(char const *s, char c)
 	return (word);
 }
 
-static char		*ft_word(const char *s, char c, int *i)
+static char	*ft_word(const char *s, char c, int *i)
 {
 	char	*str;
 	int		k;
 
-	if (!(str = (char *)malloc(sizeof(str) * (ft_strlen(s)))))
+	str = (char *)malloc(sizeof(str) * (ft_strlen(s)));
+	if (!(str))
 		return (NULL);
 	k = 0;
 	while (s[*i] != c && s[*i])
@@ -50,17 +51,18 @@ static char		*ft_word(const char *s, char c, int *i)
 	return (str);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		i;
 	int		j;
 	int		nbwords;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
 	nbwords = ft_countwords(s, c);
-	if (!(tab = malloc(sizeof(tab) * (nbwords + 22))))
+	tab = malloc(sizeof(tab) * (nbwords + 22));
+	if (!(tab))
 		return (NULL);
 	i = 0;
 	j = 0;

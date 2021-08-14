@@ -6,13 +6,13 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 08:42:43 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/20 08:43:35 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/12 14:35:10 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 

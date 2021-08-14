@@ -6,7 +6,7 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 08:10:55 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/14 15:33:44 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/12 14:09:08 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (n > i)
 	{
-		((char*)s)[i] = 0;
+		((char *)s)[i] = 0;
 		i++;
 	}
 	return ;

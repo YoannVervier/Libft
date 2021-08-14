@@ -6,7 +6,7 @@
 /*   By: yvervier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 11:09:03 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/30 22:18:46 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:03:34 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if (lst)
+	t_list	*tmp;
+
+	tmp = lst;
+	if (!lst)
+		return (NULL);
+	while (tmp->next)
 	{
-		while (lst->next)
-		{
-			lst = lst->next;
-		}
-		return (lst);
+		tmp = tmp->next;
 	}
-	return (NULL);
+	return (tmp);
 }

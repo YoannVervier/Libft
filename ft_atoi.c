@@ -6,16 +6,16 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 10:59:12 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/18 09:52:03 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/12 14:06:50 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_signe(const char *str)
+int	ft_signe(const char *str)
 {
-	int a;
-	int signe;
+	int	a;
+	int	signe;
 
 	a = 0;
 	signe = 1;
@@ -30,11 +30,11 @@ int		ft_signe(const char *str)
 	return (signe);
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int a;
-	int signe;
-	int result;
+	int	a;
+	int	signe;
+	int	result;
 
 	result = 0;
 	a = 0;

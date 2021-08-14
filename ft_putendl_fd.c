@@ -6,7 +6,7 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 10:39:32 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/21 10:44:41 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/12 14:24:52 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])

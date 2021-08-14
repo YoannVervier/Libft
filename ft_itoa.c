@@ -6,15 +6,15 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 09:10:40 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/21 10:16:23 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/12 18:54:02 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		intlen(long nb)
+int	intlen(long nb)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (nb < 0)
@@ -38,7 +38,8 @@ char	*ft_itoa(int n)
 
 	m = n;
 	len = intlen(m);
-	if (!(s = malloc(sizeof(s) * (len + 1))))
+	s = (char *)malloc(sizeof(char) * (len + 2));
+	if (!(s))
 		return (NULL);
 	s[len + 1] = '\0';
 	if (m < 0)

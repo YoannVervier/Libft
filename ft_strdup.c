@@ -6,7 +6,7 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 09:10:56 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/18 08:35:05 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/12 14:29:53 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strdup(const char *s1)
 	len = 0;
 	while (s1[len] != '\0')
 		len++;
-	if (!(result = malloc(sizeof(char) * (len + 1))))
+	result = malloc(sizeof(char) * (len + 1));
+	if (!(result))
 		return (NULL);
 	i = 0;
 	while (i < len)

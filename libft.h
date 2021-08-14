@@ -6,7 +6,7 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:04:13 by yvervier          #+#    #+#             */
-/*   Updated: 2021/04/09 00:57:37 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:23:10 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@
 # include <unistd.h>
 # include <string.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
-	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
 

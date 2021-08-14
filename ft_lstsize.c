@@ -6,7 +6,7 @@
 /*   By: yvervier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 11:00:00 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/28 11:08:37 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:55:30 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	unsigned int i;
+	int	i;
 
 	i = 0;
-	while (lst != NULL)
+	while (lst)
 	{
 		lst = lst->next;
 		i++;
