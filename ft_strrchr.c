@@ -6,7 +6,7 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 08:59:04 by yvervier          #+#    #+#             */
-/*   Updated: 2021/01/14 15:18:17 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/19 15:19:19 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,12 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 
 	str = (char *)s;
-	i = 0;
-	while (*str)
-	{
-		str++;
-		i++;
-	}
-	if (*str == '\0' && c == '\0')
-		return (str);
+	i = ft_strlen(str);
 	while (i >= 0)
 	{
-		if (*str == c)
-			return (str);
-		str--;
+		if (s[i] == (char)c)
+			return (str + i);
 		i--;
 	}
-	return (0);
+	return (NULL);
 }
