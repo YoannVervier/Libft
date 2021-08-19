@@ -6,7 +6,7 @@
 /*   By: yvervier <yvervier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 08:17:38 by yvervier          #+#    #+#             */
-/*   Updated: 2021/08/19 14:47:24 by yvervier         ###   ########.fr       */
+/*   Updated: 2021/08/19 16:10:52 by yvervier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,56 +50,56 @@ static int	ft_word(const char *s, char c, int i)
 	return (k);
 }
 
-static char    **ft_free(char **str, int i)
+static char	**ft_free(char **str, int i)
 {
-    while (str[i] && i > 0)
-    {
-        i--;
-        free(str[i]);
-    }
-    free(str);
-    return (NULL);
+	while (str[i] && i > 0)
+	{
+		i--;
+		free(str[i]);
+	}
+	free(str);
+	return (NULL);
 }
 
-static char    **treat(char const *s, char **dst, char c, int slen)
+static char	**treat(char const *s, char **dst, char c, int slen)
 {
-    int    a;
-    int    b;
-    int    d;
+	int	a;
+	int	b;
+	int	d;
 
-    a = 0;
-    b = 0;
-    while (s[a] && b < slen)
-    {
-        d = 0;
-        while (s[a] == c)
-            a++;
-        dst[b] = (char *)malloc(sizeof(char) * (ft_word(s, c, a) + 1));
-        if (dst[b] == NULL)
-            return (ft_free(dst, b));
-        while (s[a] && s[a] != c)
-        {
-            dst[b][d] = s[a];
-            d++;
-            a++;
-        }
-        dst[b][d] = '\0';
-        b++;
-    }
-    dst[b] = 0;
-    return (dst);
+	a = 0;
+	b = 0;
+	while (s[a] && b < slen)
+	{
+		d = 0;
+		while (s[a] == c)
+			a++;
+		dst[b] = (char *)malloc(sizeof(char) * (ft_word(s, c, a) + 1));
+		if (dst[b] == NULL)
+			return (ft_free(dst, b));
+		while (s[a] && s[a] != c)
+		{
+			dst[b][d] = s[a];
+			d++;
+			a++;
+		}
+		dst[b][d] = '\0';
+		b++;
+	}
+	dst[b] = 0;
+	return (dst);
 }
 
-char    **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-    int        slen;
-    char    **str;
+	int		slen;
+	char	**str;
 
-    slen = ft_countwords(s, c);
-    if (!s)
-        return (NULL);
-    str = malloc(sizeof(char *) * (slen + 1));
-    if (str == NULL)
-        return (NULL);
-    return (treat(s, str, c, slen));
+	slen = ft_countwords(s, c);
+	if (!s)
+		return (NULL);
+	str = malloc(sizeof(char *) * (slen + 1));
+	if (str == NULL)
+		return (NULL);
+	return (treat(s, str, c, slen));
 }
